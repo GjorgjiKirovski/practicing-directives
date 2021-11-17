@@ -9,18 +9,11 @@ export class AppComponent {
   title = 'practicing-directives';
 
   paragraphToggle:Boolean = true;
-  clickArray:Number[] = [];
-  clickCounter = 0;
+  clickLog: any[] = [];
 
   togglePara(){
-    if(this.paragraphToggle){
-      this.paragraphToggle = false;
-    }else{
-      this.paragraphToggle = true;
-    }
-    this.clickCounter++;
-    this.clickArray.push(this.clickCounter);
-    console.log(this.clickArray);
+    this.paragraphToggle = !this.paragraphToggle;
+    this.clickLog.push(new Date());
   }
   
 }
